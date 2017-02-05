@@ -77,6 +77,13 @@ http://google.com/?q=a,My%20Query,b,My%20Other%20Query
 
 Multiple `--json` options are allowed.
 
+### Regexp generation
+
+```
+$ uritemplate regexp "http://google.com/{?q}"
+^(http://google\.com/)(?:\?((?:(?:[\x2c\x3d\x2d\x2e\x30-\x39\x41-\x5a\x5f\x61-\x7a\x7e]|%[[:xdigit:]][[:xdigit:]])*)))?$
+```
+
 ## Development
 
 Feel free to send pull requests.
